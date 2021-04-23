@@ -19,6 +19,7 @@ class ContactData extends Component {
                     required: true,
                 },
                 valid: false,
+                touched: false,
             },
             street: {
                 elementType: 'input',
@@ -31,6 +32,7 @@ class ContactData extends Component {
                     required: true,
                 },
                 valid: false,
+                touched: false,
             },
             zipCode: {
                 elementType: 'input',
@@ -45,6 +47,7 @@ class ContactData extends Component {
                     maxLength: 5,
                 },
                 valid: false,
+                touched: false,
             },
             country: {
                 elementType: 'input',
@@ -57,6 +60,7 @@ class ContactData extends Component {
                     required: true,
                 },
                 valid: false,
+                touched: false,
             },
             email: {
                 elementType: 'input',
@@ -69,6 +73,7 @@ class ContactData extends Component {
                     required: true,
                 },
                 valid: false,
+                touched: false,
             },
             deliveryMethod: {
                 elementType: 'select',
@@ -135,6 +140,7 @@ class ContactData extends Component {
         };
         updatedFormElement.value = event.target.value;
         updatedFormElement.valid = this.checkValidity(updatedFormElement.value, updatedFormElement.validation);
+        updatedFormElement.touched = true;
         updatedOrderForm[inputIdentifier] = updatedFormElement;
         this.setState({orderForm: updatedOrderForm});
     }
@@ -159,6 +165,7 @@ class ContactData extends Component {
                         invalid={!formElement.config.valid}
                         shouldValidate={formElement.config.validation}
                         changed={(event) => this.inputChangeHandler(event, formElement.id)}
+                        touched={formElement.config.touched}
                     />
                 ))}
                 <Button btnType="Success">ORDER</Button>

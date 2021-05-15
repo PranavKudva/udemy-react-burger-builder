@@ -4,12 +4,15 @@
   "private": true,
   "dependencies": {
     "axios": "^0.21.1",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.6",
     "prop-types": "^15.7.2",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-redux": "^7.2.4",
     "react-router-dom": "^5.2.0",
     "react-scripts": "2.0.0",
+    "react-test-renderer": "^16.14.0",
     "redux": "^4.1.0",
     "redux-thunk": "^2.3.0"
   },
@@ -24,5 +27,11 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.14.2",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^26.6.3",
+    "regenerator-runtime": "^0.13.7"
+  }
 }
